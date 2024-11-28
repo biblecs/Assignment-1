@@ -1,0 +1,109 @@
+Definitions in Object Oriented Technology:
+Class: A blueprint for creating objects. It defines properties and behaviors (methods) that the created objects will have.
+
+Object: An instance of a class. It is a concrete entity based on the class blueprint and can have specific values and behaviors.
+
+Parameters: Variables that are defined in the method signature to accept values when the method is called.
+
+Arguments: Actual values passed to the parameters when the method is invoked.
+
+Key Concepts in Object Oriented Programming (OOP):
+Abstraction: Hides complex implementation details and shows only the necessary features of an object.
+
+Polymorphism: Allows objects to be treated as instances of their parent class rather than their actual class. It can be achieved through method overriding and overloading.
+
+Inheritance: Allows a class to inherit properties and methods from another class, promoting code reusability.
+
+Encapsulation: Restricts direct access to some of an object's components, which can be accessed through getter and setter methods.
+
+Java Program Example Illustrating OOP Principles:
+java
+class Animal {
+    // Encapsulation: Private properties with public getters and setters
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Abstraction: Abstract method
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    // Inheritance: Dog class inherits from Animal
+
+    // Polymorphism: Overriding the makeSound method
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog(); // Polymorphism: Dog object treated as Animal
+        myDog.setName("Buddy");
+        System.out.println("Animal name: " + myDog.getName());
+        myDog.makeSound(); // Calls overridden method in Dog class
+    }
+}
+Difference Between do...while and while Loop:
+while Loop: Executes the block of code as long as the condition is true. The condition is evaluated before the code is executed.
+
+do...while Loop: Executes the block of code once before checking the condition. The condition is evaluated after the code is executed.
+
+Example:
+
+java
+public class LoopExample {
+    public static void main(String[] args) {
+        int count = 1;
+
+        // while loop
+        while (count <= 5) {
+            System.out.println("while loop count: " + count);
+            count++;
+        }
+
+        count = 1;
+
+        // do...while loop
+        do {
+            System.out.println("do...while loop count: " + count);
+            count++;
+        } while (count <= 5);
+    }
+}
+Three Types of Comments in Java:
+Single-line comments: Used for brief comments on a single line.
+
+java
+// This is a single-line comment
+Multi-line comments: Used for longer comments spanning multiple lines.
+
+java
+/*
+ This is a multi-line comment
+ that spans multiple lines.
+ */
+Javadoc comments: Used to generate documentation for classes, methods, and fields.
+
+java
+/**
+ * This is a Javadoc comment
+ * which can be used to generate documentation.
+ */
+General Syntax of Creating an Object in Java:
+java
+ClassName objectName = new ClassName();
+Example:
+
+java
+Dog myDog = new Dog();
